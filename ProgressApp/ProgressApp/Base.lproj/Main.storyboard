@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProgressApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ukj-NZ-J4A">
+                                <rect key="frame" x="209" y="385" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9z-ge-zQf">
+                                <rect key="frame" x="196" y="455" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="runButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDD-Km-Y3b"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eUO-6n-uLK">
+                                <rect key="frame" x="172" y="318" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vU3-bw-tPl"/>
+                                </connections>
+                            </stepper>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sCc-Cr-z7F">
+                                <rect key="frame" x="144" y="306" width="150" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeM-v9-EFR">
+                                <rect key="frame" x="74" y="255" width="307" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sCc-Cr-z7F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="7g2-mw-b1z"/>
+                            <constraint firstItem="Ukj-NZ-J4A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="209" id="Bsh-sg-uMx"/>
+                            <constraint firstItem="sCc-Cr-z7F" firstAttribute="top" secondItem="BeM-v9-EFR" secondAttribute="bottom" constant="30" id="ErG-O5-uMq"/>
+                            <constraint firstItem="eUO-6n-uLK" firstAttribute="top" secondItem="sCc-Cr-z7F" secondAttribute="bottom" constant="8" id="KrU-db-k0r"/>
+                            <constraint firstItem="Ukj-NZ-J4A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="341" id="Mhx-ZU-Ahu"/>
+                            <constraint firstItem="I9z-ge-zQf" firstAttribute="top" secondItem="Ukj-NZ-J4A" secondAttribute="bottom" constant="50" id="ORn-T7-fKZ"/>
+                            <constraint firstItem="eUO-6n-uLK" firstAttribute="centerX" secondItem="Ukj-NZ-J4A" secondAttribute="centerX" id="UCq-Kr-Ddu"/>
+                            <constraint firstItem="eUO-6n-uLK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="boG-mG-GWO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BeM-v9-EFR" secondAttribute="trailing" constant="33" id="cDK-or-ZuO"/>
+                            <constraint firstItem="I9z-ge-zQf" firstAttribute="centerX" secondItem="Ukj-NZ-J4A" secondAttribute="centerX" id="ebk-l0-9Yj"/>
+                            <constraint firstItem="BeM-v9-EFR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="ki0-3T-SuB"/>
+                            <constraint firstItem="sCc-Cr-z7F" firstAttribute="centerX" secondItem="eUO-6n-uLK" secondAttribute="centerX" id="sgb-Lk-fr4"/>
+                            <constraint firstItem="BeM-v9-EFR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="211" id="voe-8q-X9P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityView" destination="Ukj-NZ-J4A" id="QHk-Xl-2TQ"/>
+                        <outlet property="labelProgress" destination="BeM-v9-EFR" id="hfo-ge-rNt"/>
+                        <outlet property="progressView" destination="sCc-Cr-z7F" id="kbv-xU-Bzv"/>
+                        <outlet property="stepperObject" destination="eUO-6n-uLK" id="tvI-Z8-kVS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
